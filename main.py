@@ -7,7 +7,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(**name**)
 
-client = Anthropic(api_key=os.environ[“ANTHROPIC_API_KEY”])
+client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 histories = {}
 
 def start(update: Update, context: CallbackContext):
