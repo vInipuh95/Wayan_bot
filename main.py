@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 
-anthropic = Anthropic(api_key=ANTHROPIC_API_KEY)
+anthropic = Anthropic(api_key=ANTHROPIC_API_KEY, proxies=None)
 
 conversation_histories: dict[int, list[dict]] = defaultdict(list)
 
